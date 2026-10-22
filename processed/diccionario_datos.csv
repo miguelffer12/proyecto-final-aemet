@@ -1,0 +1,48 @@
+columna,origen,tipo,nulos_%,descripcion
+num_expediente,A · Ayuntamiento,string,0.0,Identificador del accidente (una fila por persona implicada)
+fecha,A · Ayuntamiento,datetime64[ns],0.0,Fecha del accidente
+hora,A · Ayuntamiento,str,0.0,Hora (texto H:MM:SS)
+localizacion,A · Ayuntamiento,str,0.0,Calle o lugar del accidente
+numero,A · Ayuntamiento,str,0.0,Número del portal o punto
+cod_distrito,A · Ayuntamiento,str,0.0,Código del distrito
+distrito,A · Ayuntamiento,str,0.0,Distrito de Madrid
+tipo_accidente,A · Ayuntamiento,str,0.0,"Tipo de accidente (colisión, atropello...)"
+estado_meteorologico,A · Ayuntamiento,str,10.9,Estado meteorológico anotado por la Policía
+tipo_vehiculo,A · Ayuntamiento,str,0.0,Tipo de vehículo de la persona
+tipo_persona,A · Ayuntamiento,str,0.0,"Conductor, pasajero o peatón"
+rango_edad,A · Ayuntamiento,str,0.0,Tramo de edad
+sexo,A · Ayuntamiento,str,0.0,Sexo de la persona
+cod_lesividad,A · Ayuntamiento,int64,0.0,"Código de lesividad (nulo = 77, desconocido)"
+lesividad,A · Ayuntamiento,str,45.2,Texto de la lesividad
+coordenada_x_utm,A · Ayuntamiento,Int64,0.0,Coordenada X (UTM)
+coordenada_y_utm,A · Ayuntamiento,Int64,0.0,Coordenada Y (UTM)
+positiva_alcohol,A · Ayuntamiento,float64,0.3,"1 positivo, 0 negativo, nulo sin dato"
+positiva_droga,A · Ayuntamiento,int64,0.0,1 positivo; 0 no positivo o sin prueba
+archivo_origen,A · Ayuntamiento,str,0.0,CSV de procedencia de la fila
+hora_num,Derivada,Int64,0.0,Hora entera (0-23)
+gravedad,Derivada,str,0.0,Gravedad según el código de lesividad
+meteo_tmed,B · AEMET,Float64,1.0,Temperatura media del día (°C)
+meteo_tmin,B · AEMET,Float64,1.0,Temperatura mínima del día (°C)
+meteo_tmax,B · AEMET,Float64,1.0,Temperatura máxima del día (°C)
+meteo_prec,B · AEMET,Float64,4.7,Precipitación diaria (mm; Ip = 0)
+meteo_prec_inapreciable,B · AEMET,float64,0.0,1 si la precipitación fue inapreciable (Ip)
+meteo_velmedia,B · AEMET,Float64,25.0,Velocidad media del viento (m/s)
+meteo_racha,B · AEMET,Float64,25.3,Racha máxima de viento (m/s)
+meteo_presmax,B · AEMET,Float64,1.9,Presión máxima (hPa)
+meteo_presmin,B · AEMET,Float64,2.0,Presión mínima (hPa)
+anio,Derivada,int32,0.0,Año
+mes,Derivada,int32,0.0,Mes (1-12)
+dia_semana,Derivada,str,0.0,Día de la semana
+es_fin_semana,Derivada,int64,0.0,1 si sábado o domingo
+estacion,Derivada,str,0.0,Estación del año
+es_festivo,Derivada,int64,0.0,1 si festivo (nacional o de la Comunidad de Madrid)
+franja_horaria,Derivada,string,0.0,"Madrugada (0-5), mañana (6-11), tarde (12-19) o noche (20-23)"
+lluvia,Derivada,Int64,4.7,"1 si precipitación > 0,1 mm"
+intensidad_lluvia,Derivada,string,4.7,"Seco, débil, moderada o fuerte"
+rango_termico,Derivada,Float64,1.0,Temperatura máxima menos mínima (°C)
+categoria_temp,Derivada,string,1.0,"Frío, fresco, templado o cálido"
+n_implicados,Derivada,int64,0.0,Personas implicadas en el accidente
+gravedad_orden,Derivada,int64,0.0,Gravedad en número para ordenar
+gravedad_max_accidente,Derivada,str,0.0,Gravedad máxima del accidente
+es_grave,Derivada,int64,0.0,1 si grave o mortal
+accidente_con_grave,Derivada,int64,0.0,1 si el accidente tiene alguna persona grave o mortal
