@@ -1,0 +1,11 @@
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
+*.pyc
+.vscode/
+# Los datos en bruto SÍ se versionan (requisito del proyecto)
+# Archivos grandes (se regeneran ejecutando los notebooks)
+data/interim/accidentes_limpio.csv
+data/processed/accidentes_meteo_madrid.csv
